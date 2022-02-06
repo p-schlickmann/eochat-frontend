@@ -15,7 +15,7 @@ export function Chat(){
         onOpen: () => {
             setIsConnected(true)
             console.log('onopen')
-            fetchMessages(sendMessage, 1)
+            sendMessage(JSON.stringify({type: "fetch_messages", page: 1}))
         },
         onMessage: (receivedMessage) => {
             const parsedMsg = JSON.parse(receivedMessage.data)
@@ -31,20 +31,16 @@ export function Chat(){
             setIsConnected(false)
         },
         shouldReconnect: (closeEvent) => {
-            console.log('should reconnect', closeEvent);
             setIsConnected(false)
             return true
         },
+        reconnectAttempts: 5,
         reconnectInterval: 3000
     });
 
-    const fetchMessages = (sendMessageFunc, page) => {
-        sendMessageFunc(JSON.stringify({type: "fetch_messages", page: page}))
-    }
-
     const displayMessages = () => {
-        return messages.map((msg) => {
-            return <p>{msg.author} | {msg.content} | {msg.created_at}</p>
+        return messages.map((msg, idx) => {
+            return <p key={idx}>{msg.author} | {msg.content} | {new Date(msg.created_at).toLocaleString()}</p>
         })
     }
 
