@@ -1,10 +1,10 @@
 import { BrowserRouter } from 'react-router-dom'
-import { Rotas } from'./components/Rotas'
+import { Routes } from './components/Routes'
 
 function App() {
   return (
     <BrowserRouter>
-      <Rotas/>
+      <Routes/>
     </BrowserRouter>
   );
 }
