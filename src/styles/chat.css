@@ -1,0 +1,97 @@
+.container {
+    background-color: var(--background-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    height: 100vh;
+    position: relative;
+}
+
+.container > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+/*.headerAndBottomContainer {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    margin: 0 20px;*/
+/*}*/
+
+.headerText {
+    background-color: var(--white);
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 15px 15px 0;
+}
+
+.mainHeader {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.secondaryHeader {
+    color: var(--purple);
+    margin-top: 3px;
+}
+
+.input {
+    width: 60%;
+    height: 40px;
+    outline: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: none;
+}
+
+.messagesContainer {
+    overflow:auto;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.messagesContainer::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.messagesContainer {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.messageBox {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.message {
+    margin: 10px 10px;
+    background-color: var(--white);
+    width: 400px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.messageAuthor {
+    color: var(--purple);
+    margin-top: 0;
+}
+
+.messageContent {
+    font-weight: 300;
+}
+
+.messageDate {
+    text-align: end;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
