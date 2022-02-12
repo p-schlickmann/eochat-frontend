@@ -81,14 +81,14 @@ export function Chat(){
             return (
                 <div key={idx} className={stylesFile.messageBox}>
                     {isOwner ? <div style={{width: '40%'}}/> : null}
-                    <div className={'message'} style={
+                    <div className={stylesFile.message} style={
                         {
                             backgroundColor: isOwner ? 'var(--purple)' : 'var(--white)',
                             color: isOwner ? 'var(--white)' : 'var(--black)'
                         }}>
-                        {isOwner ? null : <p className={'messageAuthor'}>{msg.author}</p>}
-                        <span className={'messageContent'}>{msg.content}</span>
-                        <p className={'messageDate'}>{formatDate(msg.created_at)}</p>
+                        {isOwner ? null : <p className={stylesFile.messageAuthor}>{msg.author}</p>}
+                        <span className={stylesFile.messageContent}>{msg.content}</span>
+                        <p className={stylesFile.messageDate}>{formatDate(msg.created_at)}</p>
                     </div>
                     {isOwner ? null : <div style={{width: '40%'}}/>}
                 </div>
