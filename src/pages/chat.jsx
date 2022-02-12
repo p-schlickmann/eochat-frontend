@@ -5,7 +5,7 @@ import useWebSocket from "react-use-websocket";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Button from "../components/Button";
-import '../styles/chat.css'
+import stylesFile from '../styles/chat.module.css'
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 
 
@@ -79,7 +79,7 @@ export function Chat(){
             const isOwner = loggedInUsername === msg.author
 
             return (
-                <div key={idx} className={'messageBox'}>
+                <div key={idx} className={stylesFile.messageBox}>
                     {isOwner ? <div style={{width: '40%'}}/> : null}
                     <div className={'message'} style={
                         {
@@ -102,7 +102,7 @@ export function Chat(){
     }
 
     return(
-        <div className={'container'}>
+        <div className={stylesFile.container}>
             <div>
                 <a href={'/'}>
                     <Button style={styles.headerButton}>
@@ -110,16 +110,16 @@ export function Chat(){
                     </Button>
                 </a>
 
-                <div className={'headerText'}>
-                    <span className={'mainHeader'}>{isConnected ? chatName : 'Connecting...' }</span>
-                    <span className={'secondaryHeader'}>#{code}</span>
+                <div className={stylesFile.headerText}>
+                    <span className={stylesFile.mainHeader}>{isConnected ? chatName : 'Connecting...' }</span>
+                    <span className={stylesFile.secondaryHeader}>#{code}</span>
                 </div>
             </div>
-            <div ref={messagesContainer} className={'messagesContainer'} style={{display: 'block'}}>
+            <div ref={messagesContainer} className={stylesFile.messagesContainer} style={{display: 'block'}}>
                 {displayMessages()}
             </div>
             <div>
-                <input placeholder={'Message...'} className={'input'}
+                <input placeholder={'Message...'} className={stylesFile.input}
                     onChange={(e) => setMessage(e.target.value)} value={message}/>
                 <Button style={styles.sendButton}  onClick={handleNewMessage}>
                     Send
