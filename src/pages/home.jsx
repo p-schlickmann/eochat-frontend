@@ -5,21 +5,21 @@ export function Home(){
   return(
     <>
       <div className={stylesFile.container}>
-          <p>Join or Create</p>
+          <p className={stylesFile.text}>Join or Create</p>
           <div className={stylesFile.center}>
-            <p>Welcome <a href="/">User</a></p>
+            <p className={stylesFile.text}>Welcome <a href="/">User</a></p>
             <form action="" className={stylesFile.form}>
                 <input type="text" name="" id="" placeholder="Type chat code..." className={stylesFile.input}/>
                 <Button style={styles.headerButton}>
                     arrow
                 </Button>
             </form>
-            <p>or</p>
+            <p className={stylesFile.text}>or</p>
             <Button style={styles.sendButton}>
                 <p>CREATE CHAT</p>
             </Button>
           </div>
-          <p><a href="/">Logout</a></p>
+          <p className={stylesFile.text}><a href="/" className={stylesFile.link}>Logout</a></p>
       </div>
     </>
   );
