@@ -15,7 +15,7 @@ export function Register(){
             <div className={stylesFile.registerContainer}>
                 <form>
                     <label className={stylesFile.textLabel}>
-                        <input type="text" id='RegisterUserName' placeholder='Create a username'></input>
+                        <input type="text" id='RegisterUserName' placeholder='Create a username' className={stylesFile.input}></input>
                     </label>
                     <label className={stylesFile.textLabel}>
                         <input type="password" id="RegisterPassword" placeholder='Create a password'></input>
@@ -28,7 +28,7 @@ export function Register(){
             </div>
             
             <div className={stylesFile.bottomDiv}>
-                <p>Go <a>back</a></p>
+                <p className={stylesFile.text}>Go <a className={stylesFile.link}>back</a></p>
             </div>
 
 

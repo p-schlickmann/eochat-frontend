@@ -1,4 +1,4 @@
-input:focus, input:focus{
+.input:focus, .input:focus{
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
@@ -20,16 +20,16 @@ input:focus, input:focus{
     align-items: center;
 }
 
-p > a{
+.text > .link{
     color: var(--purple-dark);
     text-decoration: underline;
 }
 
-form{
+.form{
     display: flex;
 }
 
-input{
+.input{
     color: var(--white);
     padding-left: 10px;
     background-color: transparent;
@@ -38,7 +38,7 @@ input{
     border-radius: 10px 0 0 10px;
 }
 
-input:focus{
+.input:focus{
     border: 3px solid var(--purple-dark);
     box-shadow: 0 0 10px 0 var(--purple-dark);
 }

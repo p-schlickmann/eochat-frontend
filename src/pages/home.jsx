@@ -8,8 +8,8 @@ export function Home(){
           <p>Join or Create</p>
           <div className={stylesFile.center}>
             <p>Welcome <a href="/">User</a></p>
-            <form action="">
-                <input type="text" name="" id="" placeholder="Type chat code..."/>
+            <form action="" className={stylesFile.form}>
+                <input type="text" name="" id="" placeholder="Type chat code..." className={stylesFile.input}/>
                 <Button style={styles.headerButton}>
                     arrow
                 </Button>
