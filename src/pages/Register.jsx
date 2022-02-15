@@ -13,12 +13,12 @@ export function Register(){
            
 
             <div className={stylesFile.registerContainer}>
-                <form>
+                <form className={stylesFile.form}>
                     <label className={stylesFile.textLabel}>
                         <input type="text" id='RegisterUserName' placeholder='Create a username' className={stylesFile.input}></input>
                     </label>
                     <label className={stylesFile.textLabel}>
-                        <input type="password" id="RegisterPassword" placeholder='Create a password'></input>
+                        <input type="password" id="RegisterPassword" placeholder='Create a password' className={stylesFile.input}></input>
                     </label>
 
                     <Button style={styles.sendButton}>REGISTER</Button>
