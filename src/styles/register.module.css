@@ -1,0 +1,67 @@
+
+.registerContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    
+}
+.tittleDiv{
+    display: flex;
+    
+    justify-content: center;
+    justify-items: center;
+
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+    font-family: Roboto, serif;
+    color: var(--white);
+}
+
+.registerMainContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-dark);
+}
+
+.textLabel input[type="password"],
+.textLabel input[type="text"]{
+    display: flex;
+
+    background-color: var(--background-dark);
+
+    border-radius: 5px;
+    border-color: var(--purple-dark);
+    border-width: 3px;
+    border-style: solid;
+
+    justify-content: center;
+    justify-items: center;
+
+}
+
+input{
+    height: 50px;
+}
+
+.bottomDiv a {
+    color: var(--purple-dark);
+    text-decoration: underline;
+}
+.bottomDiv{
+    color: var(--white);
+}
