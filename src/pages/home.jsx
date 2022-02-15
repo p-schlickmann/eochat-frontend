@@ -5,9 +5,11 @@ export function Home(){
   return(
     <>
       <div className={stylesFile.container}>
+
           <p className={stylesFile.text}>Join or Create</p>
+
           <div className={stylesFile.center}>
-            <p className={stylesFile.text}>Welcome <a href="/">User</a></p>
+            <p className={stylesFile.text}>Welcome <a href="/" className={stylesFile.link}>User</a></p>
             <form action="" className={stylesFile.form}>
                 <input type="text" name="" id="" placeholder="Type chat code..." className={stylesFile.input}/>
                 <Button style={styles.headerButton}>
