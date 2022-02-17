@@ -1,5 +1,5 @@
 .container {
-    background-color: var(--background-light);
+    background-color: var(--background-dark);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -14,13 +14,6 @@
     justify-content: center;
     margin: 0 20px;
 }
-
-/*.headerAndBottomContainer {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    margin: 0 20px;*/
-/*}*/
 
 .headerText {
     background-color: var(--white);

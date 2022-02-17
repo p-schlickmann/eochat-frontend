@@ -3,13 +3,7 @@ import Button from '../components/Button'
 
 export function Home(){
   return(
-    <>
-      <h1>Home</h1>
-        <div className={'container'}>
-            aaa
-        </div>
       <div className={stylesFile.container}>
-
           <p className={stylesFile.text}>Join or Create</p>
 
           <div className={stylesFile.center}>
@@ -27,7 +21,6 @@ export function Home(){
           </div>
           <p className={stylesFile.text}><a href="/" className={stylesFile.link}>Logout</a></p>
       </div>
-    </>
   );
 }
 

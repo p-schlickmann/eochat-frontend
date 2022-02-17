@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router'
 import { Home } from '../pages/home'
 import {Chat} from "../pages/chat";
 import PrivateRoute from "./PrivateRoute";
-import { Register } from '../pages/Register';
+import { Register } from '../pages/register';
 
 export function Routes(){
   return(

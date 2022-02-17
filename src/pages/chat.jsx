@@ -66,11 +66,11 @@ export function Chat(){
         if (day.length < 2) {
             day = '0' + day
         }
-        if (minutes === 0) {
+        if (minutes.toString().length < 2) {
             minutes = '0' + minutes
         }
 
-        return `${hour}:${minutes} ${[day, month, year].join('/')}`
+        return `${[day, month, year].join('/')} ${hour}:${minutes} `
     }
 
     const displayMessages = () => {
