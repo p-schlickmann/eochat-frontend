@@ -1,5 +1,7 @@
 import stylesFile from '../styles/home.module.css'
 import Button from '../components/Button'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
 
 export function Home(){
   return(
@@ -8,15 +10,15 @@ export function Home(){
 
           <div className={stylesFile.center}>
             <p className={stylesFile.text}>Welcome <a href="/" className={stylesFile.link}>User</a></p>
-            <form action="" className={stylesFile.form}>
+            <div className={stylesFile.form}>
                 <input type="text" name="" id="" placeholder="Type chat code..." className={stylesFile.input}/>
                 <Button style={styles.headerButton}>
-                    arrow
+                    <FontAwesomeIcon icon={faArrowRight}/>
                 </Button>
-            </form>
+            </div>
             <p className={stylesFile.text}>or</p>
             <Button style={styles.sendButton}>
-                <p>CREATE CHAT</p>
+                <a href={'/create-chat'}>CREATE CHAT</a>
             </Button>
           </div>
           <p className={stylesFile.text}><a href="/" className={stylesFile.link}>Logout</a></p>

@@ -1,28 +1,57 @@
 import Button from "../components/Button";
 import stylesFile from "../styles/register.module.css"
-
+import {useLayoutEffect, useState} from "react";
+import {useHistory} from 'react-router-dom'
 
 export function Register(){
+    const [username, setUsername] = useState('')
+    const [pw1, setPw1] = useState('')
+    const [pw2, setPw2] = useState('')
+    const [error, setError] = useState('')
+
+    const history = useHistory()
+
+    useLayoutEffect(() => {
+        const isLoggedIn = localStorage.getItem('token') !== null
+        if (isLoggedIn) history.push('/')
+    }, [])
+
+    const makeServerCall = () => {
+        // to be implemented
+    }
+
+    const handleRegister = (e) => {
+        setError('')
+        e.preventDefault()
+        if (pw2 !== pw1) return setError("Passwords don't match")
+        if ( username.length < 8) return setError('Username is too small.')
+        makeServerCall()
+    }
+
     return(
         <div className={stylesFile.registerMainContainer}>
             <div className={stylesFile.tittleDiv}>
                 <p>Register</p>
             </div>
             <div className={stylesFile.registerContainer}>
-                <form className={stylesFile.form}>
+                <div className={stylesFile.form}>
                     <label className={stylesFile.textLabel}>
-                        <input type="text" id='RegisterUserName' placeholder='Create a username' className={stylesFile.input}></input>
+                        <input onChange={(e) => setUsername(e.target.value)} value={username} type="text" id='RegisterUserName' placeholder='Create a username' className={stylesFile.input}/>
                     </label>
                     <label className={stylesFile.textLabel}>
-                        <input type="password" id="RegisterPassword" placeholder='Create a password' className={stylesFile.input}></input>
+                        <input onChange={(e) => setPw1(e.target.value)} value={pw1} type="password" placeholder='Create a password' className={stylesFile.input}/>
+                    </label>
+                    <label className={stylesFile.textLabel}>
+                        <input onChange={(e) => setPw2(e.target.value)} value={pw2} type="password" placeholder='Confirm password' className={stylesFile.input}/>
                     </label>
 
-                    <Button style={styles.sendButton}>REGISTER</Button>
-                </form>
+                    <Button style={styles.sendButton} onClick={handleRegister}>REGISTER</Button>
+                    <p style={{textAlign: 'center', color: 'red'}}>{error}</p>
+                    </div>
             </div>
             
             <div className={stylesFile.bottomDiv}>
-                <p className={stylesFile.text}>Go <a className={stylesFile.link}>back</a></p>
+                <p className={stylesFile.text}>Go <a className={stylesFile.link} href={'/'}>home</a></p>
             </div>
 
 
