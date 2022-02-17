@@ -1,0 +1,44 @@
+.input:focus, .input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--background-dark);
+    color: var(--white);
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text > .link{
+    color: var(--purple-dark);
+    text-decoration: underline;
+}
+
+.form{
+    display: flex;
+}
+
+.input{
+    color: var(--white);
+    padding-left: 10px;
+    background-color: transparent;
+    border: 3px solid var(--purple-dark);
+    height: 50px;
+    border-radius: 10px 0 0 10px;
+}
+
+.input:focus{
+    border: 3px solid var(--purple-dark);
+    box-shadow: 0 0 10px 0 var(--purple-dark);
+}
