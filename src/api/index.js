@@ -15,7 +15,7 @@ export const getWebSocketUrl = (code) => {
     if (isDev) {
         return `ws://localhost:8000/ws/chat/${code}/`;
     } else {
-        return "wss://protected-cove-50889.herokuapp.com/ws/chat/${code}/";
+        return `wss://protected-cove-50889.herokuapp.com/ws/chat/${code}/`;
     }
 };
 
