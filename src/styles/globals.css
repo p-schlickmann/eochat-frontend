@@ -14,6 +14,12 @@ a {
     box-sizing: border-box;
 }
 
+.errorMsg {
+    color: red;
+    max-width: 250px;
+    text-align: center
+}
+
 :root {
     --background-light: #3D3E5A;
     --background-dark: #1A1A1A;
