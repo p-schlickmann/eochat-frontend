@@ -10,6 +10,15 @@ const getBackendUrl = () => {
     }
 };
 
+export const getWebSocketUrl = (code) => {
+    const isDev = "_self" in React.createElement("div");
+    if (isDev) {
+        return `ws://localhost:8000/ws/chat/${code}/`;
+    } else {
+        return "ws://protected-cove-50889.herokuapp.com/ws/chat/${code}/";
+    }
+};
+
 const api = axios.create({
     baseURL: getBackendUrl(),
 });

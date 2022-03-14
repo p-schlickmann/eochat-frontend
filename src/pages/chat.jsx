@@ -11,7 +11,7 @@ import {
     faEdit,
     faTrash,
 } from "@fortawesome/free-solid-svg-icons";
-import api from "../api";
+import api, { getWebSocketUrl } from "../api";
 
 export function Chat() {
     const [chatName, setChatName] = useState("");
@@ -27,7 +27,7 @@ export function Chat() {
     const { code } = useParams();
 
     const { lastJsonMessage, sendMessage } = useWebSocket(
-        `ws://localhost:8000/ws/chat/${code}/`,
+        getWebSocketUrl(code),
         {
             onOpen: () => {
                 sendMessage(
