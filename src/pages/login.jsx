@@ -78,6 +78,12 @@ export function Login() {
                         here
                     </a>
                 </p>
+                <p className={stylesFile.text}>
+                    Sponsor: Handpicked, remote only Django opportunities below!
+                    <a className={stylesFile.link} href={"https://django.on-remote.com/"}>
+                        Django On Remote
+                    </a>
+                </p>
             </div>
         </div>
     );
